@@ -2,6 +2,8 @@
 """
 Simple Amazon Bedrock Global CRIS example using Converse API
 Demonstrates basic usage of Claude Sonnet 4.5 with Global CRIS
+
+Author: Navule Pavan Kumar Rao
 """
 
 import boto3

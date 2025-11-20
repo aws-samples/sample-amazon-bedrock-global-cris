@@ -2,6 +2,8 @@
 """
 Simple Amazon Bedrock Global CRIS streaming example using ConverseStream API
 Demonstrates basic streaming with Claude Sonnet 4.5 and usage metrics
+
+Author: Navule Pavan Kumar Rao
 """
 
 import boto3

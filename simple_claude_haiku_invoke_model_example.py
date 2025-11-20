@@ -2,6 +2,8 @@
 """
 Simple Amazon Bedrock Global CRIS example using InvokeModel API
 Demonstrates basic usage of Claude Haiku 4.5 with Global CRIS
+
+Author: Navule Pavan Kumar Rao
 """
 
 import json

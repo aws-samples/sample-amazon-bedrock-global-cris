@@ -2,6 +2,8 @@
 """
 Simple Amazon Bedrock Global CRIS streaming example using InvokeModelWithResponseStream API
 Demonstrates basic streaming with Claude Sonnet 4.5 and Global CRIS
+
+Author: Navule Pavan Kumar Rao
 """
 
 import json

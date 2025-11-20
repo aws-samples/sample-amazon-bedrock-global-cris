@@ -2,6 +2,8 @@
 """
 Simple Amazon Bedrock Global CRIS example using Cohere Embed v4
 Demonstrates basic text embedding with Global CRIS
+
+Author: Navule Pavan Kumar Rao
 """
 import json
 

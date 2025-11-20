@@ -37,3 +37,15 @@ Global cross-Region inference for Anthropic's Claude Sonnet 4.5 delivers multipl
 - [Global cross-Region inference](https://docs.aws.amazon.com/bedrock/latest/userguide/global-cross-region-inference.html)
 - [Increase throughput with cross-Region inference](https://docs.aws.amazon.com/bedrock/latest/userguide/cross-region-inference.html#cross-region-inference-comparison)
 - [Amazon Bedrock now supports Global Cross-Region inference for Anthropic Claude Sonnet 4](https://aws.amazon.com/about-aws/whats-new/2025/09/amazon-bedrock-global-cross-region-inference-anthropic-claude-sonnet-4/)
+
+## Security
+
+See [CONTRIBUTING](CONTRIBUTING.md) for more information.
+
+## Responsible AI
+
+Implement safeguards customized to your application requirements and responsible AI policies using [Amazon Bedrock Guardrails](https://aws.amazon.com/bedrock/guardrails/)
+
+## Disclaimer
+
+The sample code; software libraries; command line tools; proofs of concept; templates; or other related technology (including any of the foregoing that are provided by our personnel) is provided to you as AWS Content under the AWS Customer Agreement, or the relevant written agreement between you and AWS (whichever applies).  You are responsible for testing, securing, and optimizing the AWS Content, such as sample code, as appropriate for production grade use based on your specific quality control practices and standards.  You should not use this AWS Content in your production accounts, or on production or other critical data. Deploying AWS Content may incur AWS charges for creating or using AWS chargeable resources, such as running Amazon EC2 instances or using Amazon S3 storage.
