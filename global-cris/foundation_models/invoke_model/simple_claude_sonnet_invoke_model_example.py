@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """
 Simple Amazon Bedrock Global CRIS example using InvokeModel API
-Demonstrates basic usage of Claude Haiku 4.5 with Global CRIS
+Demonstrates basic usage of Claude Sonnet 4.5 with Global CRIS
 
 Author: Navule Pavan Kumar Rao
+Date: November 20, 2025
 """
 
 import json
@@ -14,14 +15,14 @@ from botocore.exceptions import ClientError
 # Initialize Bedrock client for India region (Mumbai)
 bedrock = boto3.client("bedrock-runtime", region_name="ap-south-1")
 
-# Global CRIS model ID for Claude Haiku 4.5
-MODEL_ID = "global.anthropic.claude-haiku-4-5-20251001-v1:0"
+# Global CRIS model ID for Claude Sonnet 4.5
+MODEL_ID = "global.anthropic.claude-sonnet-4-5-20250929-v1:0"
 
 # Single prompt
 PROMPT = "Explain the benefits of serverless computing in 3 bullet points."
 
 print("🌍 Amazon Bedrock Global CRIS InvokeModel Demo")
-print("🚀 Model: Claude Haiku 4.5 (Global CRIS)")
+print("🚀 Model: Claude Sonnet 4.5 (Global CRIS)")
 print("📍 Source Region: ap-south-1 (India)")
 print(f"📝 Prompt: {PROMPT}")
 print("\n💬 Response:")
@@ -59,9 +60,6 @@ try:
     print("\n" + "-" * 50)
     print("✅ InvokeModel completed successfully!")
     print("🌐 Request automatically routed to optimal region via Global CRIS")
-    print(
-        "💡 Claude Haiku 4.5 offers near-frontier performance at lower cost and faster speeds"
-    )
 
     # Display token usage if available
     if "usage" in model_response:

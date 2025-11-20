@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """
 Simple Amazon Bedrock Global CRIS streaming example using ConverseStream API
-Demonstrates basic streaming with Claude Sonnet 4.5 and usage metrics
+Demonstrates basic streaming with Claude Haiku 4.5 and usage metrics
 
 Author: Navule Pavan Kumar Rao
+Date: November 20, 2025
 """
 
 import boto3
@@ -12,16 +13,16 @@ from botocore.exceptions import ClientError
 # Initialize Bedrock client for India region (Mumbai)
 bedrock = boto3.client("bedrock-runtime", region_name="ap-south-1")
 
-# Global CRIS model ID for Claude Sonnet 4.5
-MODEL_ID = "global.anthropic.claude-sonnet-4-5-20250929-v1:0"
+# Global CRIS model ID for Claude Haiku 4.5
+MODEL_ID = "global.anthropic.claude-haiku-4-5-20251001-v1:0"
 
 # Single prompt
 PROMPT = "Explain the benefits of serverless computing in 3 bullet points."
 
 print("🌍 Amazon Bedrock Global CRIS Streaming Demo")
-print("🚀 Model: Claude Sonnet 4.5 (Global CRIS)")
+print("🚀 Model: Claude Haiku 4.5 (Global CRIS)")
 print("📍 Source Region: ap-south-1 (India)")
-print(f"� Prompt: { PROMPT }")
+print(f"📝 Prompt: {PROMPT}")
 print("\n💬 Streaming Response:")
 print("-" * 50)
 
@@ -49,6 +50,9 @@ try:
     print("\n" + "-" * 50)
     print("✅ Streaming completed successfully!")
     print("🌐 Request automatically routed to optimal region via Global CRIS")
+    print(
+        "💡 Claude Haiku 4.5 offers near-frontier performance at lower cost and faster speeds"
+    )
 
     # Display token usage if available
     if usage_info:

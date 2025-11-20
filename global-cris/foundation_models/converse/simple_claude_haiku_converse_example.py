@@ -4,6 +4,7 @@ Simple Amazon Bedrock Global CRIS example using Converse API
 Demonstrates basic usage of Claude Haiku 4.5 with Global CRIS
 
 Author: Navule Pavan Kumar Rao
+Date: November 20, 2025
 """
 
 import boto3

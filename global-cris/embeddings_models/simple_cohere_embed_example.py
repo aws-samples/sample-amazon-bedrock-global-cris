@@ -4,6 +4,7 @@ Simple Amazon Bedrock Global CRIS example using Cohere Embed v4
 Demonstrates basic text embedding with Global CRIS
 
 Author: Navule Pavan Kumar Rao
+Date: November 20, 2025
 """
 import json
 
@@ -36,8 +37,8 @@ try:
     )
 
     # Extract response metadata
-    response_metadata = response.get("ResponseMetadata", {})
-    http_headers = response_metadata.get("HTTPHeaders", {})
+    response_metadata = response.get("ResponseMetadata")
+    http_headers = response_metadata.get("HTTPHeaders", {}) if response_metadata else {}
 
     # Decode the response body
     model_response = json.loads(response["body"].read())

@@ -6,6 +6,31 @@ Amazon Bedrock Global CRIS examples using Claude and Cohere models.
 
 Global cross-Region inference extends cross-Region inference beyond geographic boundaries, enabling the routing of inference requests to supported commercial AWS Regions worldwide, optimizing available resources and enabling higher model throughput.
 
+## Project Structure
+
+```text
+.
+├── application-inference-profile
+│   └── multi_tenant_inference_profile_example.py
+├── global-cris
+│   ├── embeddings_models
+│   │   └── simple_cohere_embed_example.py
+│   └── foundation_models
+│       ├── converse
+│       │   ├── simple_claude_haiku_converse_example.py
+│       │   └── simple_claude_sonnet_converse_example.py
+│       ├── converse_stream
+│       │   ├── simple_claude_haiku_converse_stream_example.py
+│       │   └── simple_claude_sonnet_converse_stream_example.py
+│       ├── invoke_model
+│       │   ├── simple_claude_haiku_invoke_model_example.py
+│       │   └── simple_claude_sonnet_invoke_model_example.py
+│       └── invoke_model_with_response_stream
+│           ├── simple_claude_haiku_invoke_model_stream_example.py
+│           └── simple_claude_sonnet_invoke_model_stream_example.py
+└── requirements.txt
+```
+
 ## Setup
 
 ```bash
@@ -16,12 +41,51 @@ pip install -r requirements.txt
 
 ## Run Examples
 
+### Global Cross-Region Inference (System-Defined Profiles)
+
+Global endpoints route requests worldwide for optimal throughput and resilience.
+
+#### Converse API
+
 ```bash
-python simple_claude_haiku_converse_example.py
-python simple_claude_sonnet_converse_example.py
-python simple_cohere_embed_example.py
+python global-cris/foundation_models/converse/simple_claude_haiku_converse_example.py
+python global-cris/foundation_models/converse/simple_claude_sonnet_converse_example.py
 ```
 
+#### Converse Stream API
+
+```bash
+python global-cris/foundation_models/converse_stream/simple_claude_haiku_converse_stream_example.py
+python global-cris/foundation_models/converse_stream/simple_claude_sonnet_converse_stream_example.py
+```
+
+#### Invoke Model API
+
+```bash
+python global-cris/foundation_models/invoke_model/simple_claude_haiku_invoke_model_example.py
+python global-cris/foundation_models/invoke_model/simple_claude_sonnet_invoke_model_example.py
+```
+
+#### Invoke Model with Response Stream API
+
+```bash
+python global-cris/foundation_models/invoke_model_with_response_stream/simple_claude_haiku_invoke_model_stream_example.py
+python global-cris/foundation_models/invoke_model_with_response_stream/simple_claude_sonnet_invoke_model_stream_example.py
+```
+
+#### Embeddings
+
+```bash
+python global-cris/embeddings_models/simple_cohere_embed_example.py
+```
+
+### Application Inference Profiles
+
+Application inference profiles enable multi-tenant workloads with isolated throughput and cost tracking per tenant.
+
+```bash
+python application-inference-profile/multi_tenant_inference_profile_example.py
+```
 
 ## Benefits of global cross-Region inference
 
@@ -49,3 +113,7 @@ Implement safeguards customized to your application requirements and responsible
 ## Disclaimer
 
 The sample code; software libraries; command line tools; proofs of concept; templates; or other related technology (including any of the foregoing that are provided by our personnel) is provided to you as AWS Content under the AWS Customer Agreement, or the relevant written agreement between you and AWS (whichever applies).  You are responsible for testing, securing, and optimizing the AWS Content, such as sample code, as appropriate for production grade use based on your specific quality control practices and standards.  You should not use this AWS Content in your production accounts, or on production or other critical data. Deploying AWS Content may incur AWS charges for creating or using AWS chargeable resources, such as running Amazon EC2 instances or using Amazon S3 storage.
+
+## License
+
+This library is licensed under the MIT-0 License. See the LICENSE file.
