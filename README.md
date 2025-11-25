@@ -1,4 +1,4 @@
-# Sample Amazon Bedrock Global cross-Region inference
+# Amazon Bedrock Global cross-Region inference
 
 Amazon Bedrock Global CRIS examples using Claude and Cohere models.
 
@@ -18,15 +18,19 @@ Global cross-Region inference extends cross-Region inference beyond geographic b
 │   └── foundation_models
 │       ├── converse
 │       │   ├── simple_claude_haiku_converse_example.py
+│       │   ├── simple_claude_opus_converse_example.py
 │       │   └── simple_claude_sonnet_converse_example.py
 │       ├── converse_stream
 │       │   ├── simple_claude_haiku_converse_stream_example.py
+│       │   ├── simple_claude_opus_converse_stream_example.py
 │       │   └── simple_claude_sonnet_converse_stream_example.py
 │       ├── invoke_model
 │       │   ├── simple_claude_haiku_invoke_model_example.py
+│       │   ├── simple_claude_opus_invoke_model_example.py
 │       │   └── simple_claude_sonnet_invoke_model_example.py
 │       └── invoke_model_with_response_stream
 │           ├── simple_claude_haiku_invoke_model_stream_example.py
+│           ├── simple_claude_opus_invoke_model_stream_example.py
 │           └── simple_claude_sonnet_invoke_model_stream_example.py
 └── requirements.txt
 ```
@@ -49,6 +53,7 @@ Global endpoints route requests worldwide for optimal throughput and resilience.
 
 ```bash
 python global-cris/foundation_models/converse/simple_claude_haiku_converse_example.py
+python global-cris/foundation_models/converse/simple_claude_opus_converse_example.py
 python global-cris/foundation_models/converse/simple_claude_sonnet_converse_example.py
 ```
 
@@ -56,6 +61,7 @@ python global-cris/foundation_models/converse/simple_claude_sonnet_converse_exam
 
 ```bash
 python global-cris/foundation_models/converse_stream/simple_claude_haiku_converse_stream_example.py
+python global-cris/foundation_models/converse_stream/simple_claude_opus_converse_stream_example.py
 python global-cris/foundation_models/converse_stream/simple_claude_sonnet_converse_stream_example.py
 ```
 
@@ -63,6 +69,7 @@ python global-cris/foundation_models/converse_stream/simple_claude_sonnet_conver
 
 ```bash
 python global-cris/foundation_models/invoke_model/simple_claude_haiku_invoke_model_example.py
+python global-cris/foundation_models/invoke_model/simple_claude_opus_invoke_model_example.py
 python global-cris/foundation_models/invoke_model/simple_claude_sonnet_invoke_model_example.py
 ```
 
@@ -70,6 +77,7 @@ python global-cris/foundation_models/invoke_model/simple_claude_sonnet_invoke_mo
 
 ```bash
 python global-cris/foundation_models/invoke_model_with_response_stream/simple_claude_haiku_invoke_model_stream_example.py
+python global-cris/foundation_models/invoke_model_with_response_stream/simple_claude_opus_invoke_model_stream_example.py
 python global-cris/foundation_models/invoke_model_with_response_stream/simple_claude_sonnet_invoke_model_stream_example.py
 ```
 
