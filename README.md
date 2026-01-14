@@ -1,6 +1,6 @@
 # Amazon Bedrock Global cross-Region inference
 
-Amazon Bedrock Global CRIS examples using Claude and Cohere models.
+Amazon Bedrock Global CRIS examples using Claude, Cohere, Amazon Nova, and TwelveLabs Pegasus models.
 
 ## Global cross-Region inference
 
@@ -19,19 +19,27 @@ Global cross-Region inference extends cross-Region inference beyond geographic b
 │       ├── converse
 │       │   ├── simple_claude_haiku_converse_example.py
 │       │   ├── simple_claude_opus_converse_example.py
-│       │   └── simple_claude_sonnet_converse_example.py
+│       │   ├── simple_claude_sonnet_converse_example.py
+│       │   └── simple_nova_lite_converse_example.py
 │       ├── converse_stream
 │       │   ├── simple_claude_haiku_converse_stream_example.py
 │       │   ├── simple_claude_opus_converse_stream_example.py
-│       │   └── simple_claude_sonnet_converse_stream_example.py
+│       │   ├── simple_claude_sonnet_converse_stream_example.py
+│       │   └── simple_nova_lite_converse_stream_example.py
 │       ├── invoke_model
 │       │   ├── simple_claude_haiku_invoke_model_example.py
 │       │   ├── simple_claude_opus_invoke_model_example.py
-│       │   └── simple_claude_sonnet_invoke_model_example.py
-│       └── invoke_model_with_response_stream
-│           ├── simple_claude_haiku_invoke_model_stream_example.py
-│           ├── simple_claude_opus_invoke_model_stream_example.py
-│           └── simple_claude_sonnet_invoke_model_stream_example.py
+│       │   ├── simple_claude_sonnet_invoke_model_example.py
+│       │   ├── simple_nova_lite_invoke_model_example.py
+│       │   └── simple_pegasus_invoke_model_example.py
+│       ├── invoke_model_with_response_stream
+│       │   ├── simple_claude_haiku_invoke_model_stream_example.py
+│       │   ├── simple_claude_opus_invoke_model_stream_example.py
+│       │   ├── simple_claude_sonnet_invoke_model_stream_example.py
+│       │   ├── simple_nova_lite_invoke_model_stream_example.py
+│       │   └── simple_pegasus_invoke_model_stream_example.py
+│       └── utils.py
+├── .env.example
 └── requirements.txt
 ```
 
@@ -41,6 +49,15 @@ Global cross-Region inference extends cross-Region inference beyond geographic b
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
+```
+
+### Environment Configuration (for Pegasus examples)
+
+The TwelveLabs Pegasus video model examples require S3 bucket configuration:
+
+```bash
+cp .env.example .env
+# Edit .env with your S3 bucket name and AWS region
 ```
 
 ## Run Examples
@@ -55,6 +72,7 @@ Global endpoints route requests worldwide for optimal throughput and resilience.
 python global-cris/foundation_models/converse/simple_claude_haiku_converse_example.py
 python global-cris/foundation_models/converse/simple_claude_opus_converse_example.py
 python global-cris/foundation_models/converse/simple_claude_sonnet_converse_example.py
+python global-cris/foundation_models/converse/simple_nova_lite_converse_example.py
 ```
 
 #### Converse Stream API
@@ -63,6 +81,7 @@ python global-cris/foundation_models/converse/simple_claude_sonnet_converse_exam
 python global-cris/foundation_models/converse_stream/simple_claude_haiku_converse_stream_example.py
 python global-cris/foundation_models/converse_stream/simple_claude_opus_converse_stream_example.py
 python global-cris/foundation_models/converse_stream/simple_claude_sonnet_converse_stream_example.py
+python global-cris/foundation_models/converse_stream/simple_nova_lite_converse_stream_example.py
 ```
 
 #### Invoke Model API
@@ -71,6 +90,8 @@ python global-cris/foundation_models/converse_stream/simple_claude_sonnet_conver
 python global-cris/foundation_models/invoke_model/simple_claude_haiku_invoke_model_example.py
 python global-cris/foundation_models/invoke_model/simple_claude_opus_invoke_model_example.py
 python global-cris/foundation_models/invoke_model/simple_claude_sonnet_invoke_model_example.py
+python global-cris/foundation_models/invoke_model/simple_nova_lite_invoke_model_example.py
+python global-cris/foundation_models/invoke_model/simple_pegasus_invoke_model_example.py
 ```
 
 #### Invoke Model with Response Stream API
@@ -79,6 +100,8 @@ python global-cris/foundation_models/invoke_model/simple_claude_sonnet_invoke_mo
 python global-cris/foundation_models/invoke_model_with_response_stream/simple_claude_haiku_invoke_model_stream_example.py
 python global-cris/foundation_models/invoke_model_with_response_stream/simple_claude_opus_invoke_model_stream_example.py
 python global-cris/foundation_models/invoke_model_with_response_stream/simple_claude_sonnet_invoke_model_stream_example.py
+python global-cris/foundation_models/invoke_model_with_response_stream/simple_nova_lite_invoke_model_stream_example.py
+python global-cris/foundation_models/invoke_model_with_response_stream/simple_pegasus_invoke_model_stream_example.py
 ```
 
 #### Embeddings
